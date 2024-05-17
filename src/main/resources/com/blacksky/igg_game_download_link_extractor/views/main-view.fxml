@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="923.0" style="-fx-background-color: #030A21;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.blacksky.igg_game_download_link_extractor.cotrollers.MainController">
+   <children>
+      <Text fill="WHITE" layoutX="25.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IGG Link Extractor">
+         <font>
+            <Font name="Eras Bold ITC" size="30.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="cloudProvider" editable="true" layoutX="25.0" layoutY="92.0" prefHeight="0.0" prefWidth="150.0" />
+      <Text fill="WHITE" layoutX="25.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select cloud provider" />
+      <Spinner fx:id="threadBox" layoutX="199.0" layoutY="92.0" prefHeight="0.0" />
+      <Text fill="WHITE" layoutX="199.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select number of threads" />
+      <Text fill="WHITE" layoutX="372.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the url of disire game info page" />
+      <Button fx:id="extractButton" layoutX="645.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#clickOnExtractButton" prefHeight="26.0" prefWidth="121.0" text="Extract">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="792.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Progress Info" />
+      <ProgressIndicator fx:id="progressIndicator" layoutX="862.0" layoutY="85.0" prefHeight="35.0" prefWidth="18.0" />
+      <Text fill="WHITE" layoutX="25.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Extracted download links" />
+      <TextArea fx:id="downloadLinkArea" editable="false" layoutX="25.0" layoutY="159.0" prefHeight="270.0" prefWidth="871.0" />
+      <Button fx:id="copyClipboardButton" layoutX="25.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#clickOnCopyToClipboardButton" prefHeight="42.0" prefWidth="597.0" text="Copy To Clipboard">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="659.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright @ 2024 ( Developed by Blacksky )">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Label fx:id="progressInfoLabel" layoutX="792.0" layoutY="89.0" text="0 / 0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="gameInfoUrlBox" layoutX="372.0" layoutY="92.0" prefHeight="26.0" prefWidth="262.0" />
+      <Label fx:id="extractLabel" layoutX="792.0" layoutY="120.0" text="Extracting..." textFill="#00ffed">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
